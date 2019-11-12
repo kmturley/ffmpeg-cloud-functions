@@ -1,0 +1,6 @@
+# ignore
+node_modules
+videos/*
+
+# include
+!videos/example.avi

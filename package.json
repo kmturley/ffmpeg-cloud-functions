@@ -1,0 +1,26 @@
+{
+  "name": "ffmpeg-cloud-functions",
+  "version": "1.0.0",
+  "description": "Example video encoder running on Google Cloud Functions",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gcloud functions deploy encodeVideo --runtime nodejs8 --trigger-resource ffmpeg-cloud-functions --trigger-event google.storage.object.finalize",
+    "start": "node local.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "FFMPEG",
+    "Google",
+    "Cloud",
+    "Functions",
+    "Video",
+    "Encoder"
+  ],
+  "author": "kmturley",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^4.1.1",
+    "ffmpeg-static": "^2.7.0",
+    "fluent-ffmpeg": "^2.1.2"
+  }
+}
